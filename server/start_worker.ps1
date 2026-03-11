@@ -6,7 +6,7 @@ Write-Host "Starting Celery Worker (foreground)..."
 
 # Function to run celery
 function Run-Celery($celeryPath) {
-    & $celeryPath -A src.services.celery:celery_app worker --loglevel=info --pool=threads
+    & $celeryPath -A src.services.celery:celery_app worker --loglevel=info --pool=threads --without-gossip --without-mingle --without-heartbeat
 }
 
 # Try Poetry-managed environment first

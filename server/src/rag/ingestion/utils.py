@@ -22,20 +22,20 @@ def partition_document(temp_file: str, file_type: str, source_type: str = "file"
     dispatch = {
         "pdf": lambda: partition_pdf(
             filename=temp_file,
-            strategy="hi_res",  # Most accurate (but slower) processing method of extraction.
+            strategy="ocr_only",  # Most accurate (but slower) processing method of extraction.
             infer_table_structure=True,  # Keep tables as structured HTML, not jumbled text.
             extract_image_block_types=["Image"],  # Grab images found in pdf.
             extract_image_block_to_payload=True,  # Store images as base64 strings in the payload.
         ),
         "docx": lambda: partition_docx(
             filename=temp_file,
-            strategy="hi_res",
+            strategy="fast",
             infer_table_structure=True,
             # ! Note : We haven't implemented image extraction for docx,pptx ,md files.
         ),
         "pptx": lambda: partition_pptx(
             filename=temp_file,
-            strategy="hi_res",
+            strategy="fast",
             infer_table_structure=True,
         ),
         "txt": lambda: partition_text(filename=temp_file),

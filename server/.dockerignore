@@ -1,0 +1,58 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+*.egg
+.eggs/
+dist/
+build/
+
+# Virtual environments (never copy local venv into image)
+.venv/
+venv/
+env/
+ENV/
+
+# Poetry local cache
+.cache/
+
+# Git
+.git/
+.gitignore
+.gitattributes
+
+# Dev / test files (never needed in production image)
+tests/
+test_*
+*_test.py
+docs/
+*.md
+!README.md
+
+# Notebooks (heavy, not needed at runtime)
+*.ipynb
+.ipynb_checkpoints/
+
+# Environment files (use AWS Secrets Manager / ECS task env vars instead)
+.env
+.env.*
+*.env
+
+# IDE / OS files
+.vscode/
+.idea/
+*.DS_Store
+Thumbs.db
+
+# Docker files themselves
+Dockerfile*
+docker-compose*
+.dockerignore
+
+# Logs and temp files
+*.log
+logs/
+tmp/
+temp/

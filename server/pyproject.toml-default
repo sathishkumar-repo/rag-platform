@@ -18,7 +18,7 @@ celery = ">=5.5.3,<6.0.0"
 langchain = "1.0.8"
 langchain-community = "0.4.1"
 langchain-openai = "1.0.3"
-unstructured = {version = "0.18.11", extras = ["csv", "doc", "docx", "md", "pdf", "ppt", "pptx", "rtf", "xlsx"]}
+unstructured = {version = "0.18.11", extras = ["csv", "doc", "docx", "image", "md", "pdf", "ppt", "pptx", "rtf", "xlsx"]}
 scrapingbee = "^2.0.2"
 redis = "^7.0.1"
 langchain-tavily = "^0.2.17"
@@ -26,6 +26,7 @@ ddgs = "^9.11.1"
 langgraph = ">=1.0.0,<2.0.0"
 openai = "^2.26.0"
 structlog = "^25.5.0"
+
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
